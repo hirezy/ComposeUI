@@ -1,0 +1,25 @@
+package com.hirezy.composeuI.feature.network.upload.data.repository
+
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import okhttp3.MultipartBody
+import com.hirezy.composeuI.feature.network.upload.data.model.UploadResult
+import com.hirezy.composeuI.feature.network.upload.retrofit.RetrofitManger
+import com.hirezy.composeuI.feature.network.upload.retrofit.UploadService
+import java.io.IOException
+
+class UploadRepositoryImpl : UploadRepository {
+    private val uploadService by lazy {
+        RetrofitManger.retrofit.create(UploadService::class.java)
+    }
+
+    override suspend fun uploadFile(file: MultipartBody.Part): UploadResult? {
+        return withContext(Dispatchers.IO) {
+            try {
+                uploadService.uploadFile(file)
+            } catch (e: IOException) {
+                null
+            }
+        }
+    }
+}

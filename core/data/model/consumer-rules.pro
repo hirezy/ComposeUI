@@ -1,0 +1,1 @@
+-keep,allowobfuscation class com.hirezy.composeuI.core.data.model.**

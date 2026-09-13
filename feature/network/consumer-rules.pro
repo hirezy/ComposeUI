@@ -1,0 +1,2 @@
+-keep class com.hirezy.composeuI.feature.network.request.data.model.** { *; }
+-keep class com.hirezy.composeuI.feature.network.upload.data.model.** { *; }

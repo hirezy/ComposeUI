@@ -34,6 +34,8 @@ zxing = "3.5.4"
 coil = "3.4.0"
 coilZoomable = "0.18.0"
 uiUnit = "1.12.1"
+ui = "1.12.1"
+uiGraphics = "1.12.1"
 
 [libraries]
 # 核心库
@@ -90,6 +92,8 @@ ksp-gradle-plugin = { group = "com.google.devtools.ksp", name = "com.google.devt
 room-gradle-plugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "roomGradlePlugin" }
 androidx-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
 androidx-ui-unit = { group = "androidx.compose.ui", name = "ui-unit", version.ref = "uiUnit" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics", version.ref = "uiGraphics" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }

@@ -7,6 +7,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
     implementation(libs.navigation.compose)
 
     implementation(projects.core.ui.theme)

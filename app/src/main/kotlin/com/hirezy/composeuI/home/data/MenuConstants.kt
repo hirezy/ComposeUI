@@ -104,7 +104,8 @@ internal val MenuGroups = listOf(
         listOf(
             MenuItem("BarChart", "bar_chart"),
             MenuItem("LineChart", "line_chart"),
-            MenuItem("PieChart", "pie_chart")
+            MenuItem("PieChart", "pie_chart"),
+            MenuItem("RadarChart", "radar_chart"),
         )
     ),
     MenuGroup(

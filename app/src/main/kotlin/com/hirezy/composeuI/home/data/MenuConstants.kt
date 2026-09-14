@@ -106,6 +106,7 @@ internal val MenuGroups = listOf(
             MenuItem("LineChart", "line_chart"),
             MenuItem("PieChart", "pie_chart"),
             MenuItem("RadarChart", "radar_chart"),
+            MenuItem("CandleStickChart", "candle_stick_chart"),
         )
     ),
     MenuGroup(

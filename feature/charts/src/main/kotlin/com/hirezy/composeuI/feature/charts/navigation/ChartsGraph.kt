@@ -4,6 +4,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.hirezy.composeuI.feature.charts.screens.RadarChartScreen
 import com.hirezy.composeuI.feature.charts.screens.BarChartScreen
+import com.hirezy.composeuI.feature.charts.screens.CandleChartScreen
 import com.hirezy.composeuI.feature.charts.screens.LineChartScreen
 import com.hirezy.composeuI.feature.charts.screens.PieChartScreen
 
@@ -20,6 +21,10 @@ fun NavGraphBuilder.addChartGraph() {
 
     composable("radar_chart"){
         RadarChartScreen()
+    }
+
+    composable("candle_stick_chart"){
+        CandleChartScreen()
     }
 
 }

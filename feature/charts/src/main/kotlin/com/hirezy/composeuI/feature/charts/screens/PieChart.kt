@@ -103,7 +103,6 @@ fun PieChartScreen() {
                 legendPosition = legendPosition.value,
                 pieRadiusRatio = pieRadiusRatio.value,
                 legendMaxWidth = 160.dp,
-                legendMaxLineItemCount = 2,
                 legendContent = { items ->
                     if (showLegend.value) {
                         DefaultChartLegend(items, modifier = Modifier.padding(top = 16.dp), maxLineItemCount = 2)

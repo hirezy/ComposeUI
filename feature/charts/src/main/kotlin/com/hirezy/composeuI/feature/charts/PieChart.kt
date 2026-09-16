@@ -58,13 +58,9 @@ fun WePieChart(
     pieRadiusRatio: Float = 0.8f,
     // ==========新增：水平布局（左右图例）时图例最大宽度，防止图例占满屏幕 ==========
     legendMaxWidth: Dp = 160.dp,
-    // ==========新增：图例一行最多展示条目数量，默认2个，限制横向拉长 ==========
-    legendMaxLineItemCount: Int = 2,
     legendContent: @Composable ((List<PieChartLegendItem>) -> Unit)?,
 ) {
     require(pieRadiusRatio in 0.01f..1f) { "pieRadiusRatio must between 0.01 ~ 1.0" }
-    require(legendMaxLineItemCount > 0) { "legendMaxLineItemCount must >0" }
-
     // 计算全部数据总和
     val total = remember(dataSource) { dataSource.sumOf { it.value.toDouble() }.toFloat() }
     // 根据数据条目数量生成配套颜色
@@ -161,7 +157,7 @@ fun WePieChart(
 
                 // 饼图主体 weight(1f) 自动占用【剩余所有宽度】，图例被限制最大宽度，饼图一定有空间
                 Box(
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier.weight(1f).aspectRatio(1f), // 上下布局场景，宽高1:1没问题,
                     contentAlignment = Alignment.Center
                 ) {
                     PieFace(
